@@ -1,0 +1,181 @@
+@import "./variables.scss";
+
+// breakpoints mixins:
+@mixin miniMobile {
+  @media (min-width: $miniAndUp) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: $standardMobileAndUp) {
+    @content;
+  }
+}
+
+@mixin smallTablet {
+  @media (min-width: $smallTabletAndUp) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $standardTabletAndUp) {
+    @content;
+  }
+}
+
+@mixin atMedium {
+  @media (min-width: $laptopAndUp) {
+    @content;
+  }
+}
+
+// FX:
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes revBounce {
+  0%,
+  100% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@mixin revBounce() {
+  animation: revBounce 2s infinite;
+}
+
+@mixin bounce() {
+  animation: bounce 2s infinite;
+}
+
+@mixin wave() {
+  animation: wave 1s infinite;
+}
+
+@mixin hoverEffect($initOpacity: 0.5) {
+  transition: all 0.1s ease-in-out;
+  opacity: $initOpacity;
+
+  &:hover {
+    cursor: pointer;
+    transition-timing-function: ease-in;
+    transition: 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+// Generic Component Styles:
+@mixin btnStyles(
+  $boderColor: $mainColor,
+  $borderThickness: 3px,
+  $fontColor: $lightShade,
+  $btnWidth: 100px,
+  $margin: none,
+  $fontWeight: bold,
+  $height: 30px,
+  $fontSize: 1.8rem,
+  $bgColor: none,
+  $preOpacity: 0.5,
+  $postOpacity: 1
+) {
+  all: unset;
+  border: $borderThickness solid $boderColor;
+  color: $fontColor;
+  padding: 10px;
+  width: $btnWidth;
+  height: $height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+  opacity: $preOpacity;
+  margin: $margin;
+  font-size: $fontSize;
+  background-color: $bgColor;
+
+  &:hover {
+    cursor: pointer;
+    transition-timing-function: ease-in;
+    transition: 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform: translateY(-3px);
+    opacity: $postOpacity;
+  }
+}
+
+// DRY Global FlexBox Options:
+@mixin flexAlignAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flexAlignCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexAlignCenterWithCol {
+  @include flexAlignCenter();
+  flex-direction: column;
+}
+
+@mixin FlexAlignCenterWithWrap {
+  @include flexAlignCenter();
+  flex-wrap: wrap;
+}
+
+@mixin FlexAlignCenterWithWrapRev {
+  @include flexAlignCenter();
+  flex-wrap: wrap-reverse;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexCenterWithWrap {
+  @include flexAlignCenter();
+  flex-wrap: wrap;
+}
+
+@mixin flexCenterWithRev {
+  @include flexAlignCenter();
+  flex-wrap: wrap-reverse;
+}
+
+@mixin withCol {
+  flex-direction: column;
+}
+
+@mixin withColRev {
+  flex-direction: column-reverse;
+}
+
+@mixin withRowRev {
+  flex-direction: row-reverse;
+}

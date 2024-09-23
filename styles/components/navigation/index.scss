@@ -1,0 +1,65 @@
+@import "../../globals/variables.scss";
+@import "../../globals/mixins.scss";
+
+.headerContainer {
+  border: 0.2rem solid yellow;
+  .navBurgerMenu {
+    .burger-icon {
+      height: 40px;
+      width: 40px;
+      margin: 10px 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .burger-drawer {
+      height: 100dvh;
+      background-color: black;
+      position: absolute;
+      top: 0;
+      opacity: 1;
+      left: -10000px;
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+      @include tablet {
+        display: none;
+      }
+
+      &.open-menu {
+        left: 0;
+        opacity: 1;
+      }
+
+      h1,
+      h3 {
+        color: white;
+      }
+    }
+  }
+  .navDesktopMenu {
+    // mobile display none:
+    display: none;
+    // desktop will display all other styles don't need to be wrapped after this:
+    @include tablet {
+      @include flexAlignAround();
+    }
+    border: 0.2rem solid green;
+    .navLogoContainer {
+      border: 0.2rem solid blue;
+      @include flexAlignCenter();
+      width: 10%;
+      .logo {
+        width: 100px;
+      }
+    }
+    .navLinksContainer {
+      border: 2px solid red;
+      @include flexAlignAround();
+      width: 70%;
+    }
+  }
+}

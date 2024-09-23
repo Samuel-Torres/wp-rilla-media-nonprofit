@@ -1,0 +1,51 @@
+// Primary brand color
+$primary-color: #b52929;
+
+// Complementary color (Green)
+$complementary-color: #29a9e3;
+
+// Tints of primary color (lighter)
+// $primary-tint-10: lighten($primary-color, 10%); // #cc4a4a
+// $primary-tint-20: lighten($primary-color, 20%); // #dd6b6b
+// $primary-tint-30: lighten($primary-color, 30%); // #ee8c8c
+
+// Shades of primary color (darker)
+// $primary-shade-10: darken($primary-color, 10%); // #a02020
+// $primary-shade-20: darken($primary-color, 20%); // #891919
+// $primary-shade-30: darken($primary-color, 30%); // #721212
+
+// Tones of primary color (desaturated)
+// $primary-tone-10: desaturate($primary-color, 10%); // #a63131
+// $primary-tone-20: desaturate($primary-color, 20%); // #8c4040
+// $primary-tone-30: desaturate($primary-color, 30%); // #734f4f
+
+// Complementary color tints (lighter)
+// $complementary-tint-10: lighten($complementary-color, 10%); // #4bc971
+// $complementary-tint-20: lighten($complementary-color, 20%); // #6ddd90
+// $complementary-tint-30: lighten($complementary-color, 30%); // #8df1af
+
+// Complementary color shades (darker)
+// $complementary-shade-10: darken($complementary-color, 10%); // #249d48
+// $complementary-shade-20: darken($complementary-color, 20%); // #20883f
+// $complementary-shade-30: darken($complementary-color, 30%); // #1c7235
+
+// Complementary color tones (desaturated)
+// $complementary-tone-10: desaturate($complementary-color, 10%); // #2faf5a
+// $complementary-tone-20: desaturate($complementary-color, 20%); // #379f67
+// $complementary-tone-30: desaturate($complementary-color, 30%); // #438d70;
+
+$light-gray: #f5f5f5; // Light card background
+$medium-gray: #e0e0e0; // Slightly darker for hover or secondary cards
+$dark-gray: #b3b3b3; // Borders or subtle shadows
+$charcoal-gray: #4d4d4d; // Text or strong contrast
+$cool-gray-blue: #ccdfe3;
+$off-white: #fafafa; // Clean, minimal card background
+$eggshell: #f2f2ee; // Slightly warmer white, good for contrast
+$ivory: #edece7; // Adds depth without distracting from content
+
+// Responsive Break Points:
+$miniAndUp: 320px;
+$standardMobileAndUp: 480px;
+$smallTabletAndUp: 768px;
+$standardTabletAndUp: 1024px;
+$laptopAndUp: 1280;

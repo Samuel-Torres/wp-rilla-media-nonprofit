@@ -1,0 +1,36 @@
+@import "./globals/variables.scss";
+@import "./globals/mixins.scss";
+
+// other component styles:
+@import "./components/footer/footer.scss";
+@import "./components/navigation/index.scss";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  border: 2px solid black;
+  max-width: 2000px;
+  margin: 0 auto;
+  background-color: $off-white;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 1.9rem;
+}
+h4 {
+  font-size: 1.6rem;
+}
+h5 {
+  font-size: 1.4rem;
+}
+h6 {
+  font-size: 1.3rem;
+}
