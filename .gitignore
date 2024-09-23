@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Log files
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Build directories
+dist/
+build/
+public/
+
+# Compiled files
+*.css.map
+*.js.map
+
+# Miscellaneous
+*.tmp
